@@ -34,16 +34,17 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
+READERS = {'html': None}
+
 STATIC_PATHS = [
-    'extra/ads.txt',
-    'extra/robots.txt',
-    'extra/CNAME',
+    'extra',
 ]
 
 EXTRA_PATH_METADATA = {
     'extra/ads.txt': {'path': 'ads.txt'},
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/CNAME': {'path': 'CNAME'},
+    'extra/naver713572c10e2e1502b0523654ffda58d6.html': {'path': 'naver713572c10e2e1502b0523654ffda58d6.html'},
 }
 
 THEME = "/Users/myeongsunchoi/dev/work_with_cursor/reason1241.github.io/theme"
