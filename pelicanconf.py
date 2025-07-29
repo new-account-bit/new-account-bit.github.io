@@ -37,11 +37,13 @@ DEFAULT_PAGINATION = 10
 STATIC_PATHS = [
     'extra/ads.txt',
     'extra/robots.txt',
+    'extra/CNAME',
 ]
 
 EXTRA_PATH_METADATA = {
-    'extra/ads.txt':      {'path': 'ads.txt'},
-    'extra/robots.txt':   {'path': 'robots.txt'},
+    'extra/ads.txt': {'path': 'ads.txt'},
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/CNAME': {'path': 'CNAME'},
 }
 
 THEME = "/Users/myeongsunchoi/dev/work_with_cursor/reason1241.github.io/theme"
