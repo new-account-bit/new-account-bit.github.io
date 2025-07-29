@@ -1,7 +1,7 @@
 Title: 과속 카메라 위치 확인 지도
 Date: 2025-07-29 14:00
 Modified: 2025-07-29 14:00
-Category: 서비스 출시
+Category: 서비스
 Tags: 과속 카메라 위치, 과속 카메라 위치 확인
 Slug: 과속-카메라-위치-확인-지도
 Authors: mschoi
