@@ -43,3 +43,29 @@ EXTRA_PATH_METADATA = {
     'extra/ads.txt':      {'path': 'ads.txt'},
     'extra/robots.txt':   {'path': 'robots.txt'},
 }
+
+THEME = "/Users/myeongsunchoi/dev/work_with_cursor/reason1241.github.io/theme"
+
+# PLUGINS = ['pelican.plugins.injector']
+
+
+# GOOGLE_ANALYTICS_JS = """
+# <!-- Google tag (gtag.js) -->
+# <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKBLYJ1X8S"></script>
+# <script>
+#   window.dataLayer = window.dataLayer || [];
+#   function gtag(){dataLayer.push(arguments);}
+#   gtag('js', new Date());
+
+#   gtag('config', 'G-JKBLYJ1X8S');
+# </script>
+# """
+
+# GOOGLE_ADSENSE_JS = """
+# <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2193625028151658" crossorigin="anonymous"></script>
+# """
+
+# INJECTOR_ITEMS = [
+#     ('head', GOOGLE_ANALYTICS_JS, 'after'),
+#     ('head', GOOGLE_ADSENSE_JS, 'after'),
+# ]
