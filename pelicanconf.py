@@ -45,6 +45,7 @@ EXTRA_PATH_METADATA = {
 }
 
 THEME = "/Users/myeongsunchoi/dev/work_with_cursor/reason1241.github.io/theme"
+OUTPUT_PATH = 'docs'
 
 # PLUGINS = ['pelican.plugins.injector']
 
