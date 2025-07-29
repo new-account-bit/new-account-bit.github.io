@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>mschoi</title><link href="https://mschoi.com/" rel="alternate"/><link href="https://mschoi.com/feeds/all.atom.xml" rel="self"/><id>https://mschoi.com/</id><updated>2025-07-29T14:00:00+09:00</updated><entry><title>과속 카메라 위치 확인 지도</title><link href="https://mschoi.com/%EA%B3%BC%EC%86%8D-%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%9C%84%EC%B9%98-%ED%99%95%EC%9D%B8-%EC%A7%80%EB%8F%84.html" rel="alternate"/><published>2025-07-29T14:00:00+09:00</published><updated>2025-07-29T14:00:00+09:00</updated><author><name>mschoi</name></author><id>tag:mschoi.com,2025-07-29:/과속-카메라-위치-확인-지도.html</id><summary type="html">&lt;p&gt;과속 카메라 위치 확인 지도를 출시했습니다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;평소 과속 카메라 위치를 확인하고 싶어도, 이를 확인하기가 쉽지 않습니다.
+지역 별로 엑셀 파일을 다운로드하여 직접 확인하여야하는 번거로움이 있었는데,
+이를 쉽게 해결하기 위한 서비스입니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://speedcameramap.mschoi.com"&gt;링크&lt;/a&gt;&lt;/p&gt;</content><category term="서비스"/><category term="과속 카메라 위치"/><category term="과속 카메라 위치 확인"/></entry></feed>
