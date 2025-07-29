@@ -33,3 +33,13 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+STATIC_PATHS = [
+    'extra/ads.txt',
+    'extra/robots.txt',
+]
+
+EXTRA_PATH_METADATA = {
+    'extra/ads.txt':      {'path': 'ads.txt'},
+    'extra/robots.txt':   {'path': 'robots.txt'},
+}
