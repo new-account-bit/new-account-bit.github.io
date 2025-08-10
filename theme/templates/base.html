@@ -17,6 +17,63 @@
                         <meta name="generator" content="Pelican" />
                         <title>{% block title %}{{ SITENAME|striptags }}{%endblock%}</title>
                         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+                        {% if not article and not page and SITESUBTITLE %}
+                          <meta name="description" content="{{ SITESUBTITLE | striptags }}" />
+                        {% endif %}
+                        <meta name="robots" content="index,follow" />
+
+                        {# Canonical URL #}
+                        {% set canonical = SITEURL ~ '/' %}
+                        {% if article %}
+                          {% set canonical = SITEURL ~ '/' ~ article.url %}
+                        {% elif page %}
+                          {% set canonical = SITEURL ~ '/' ~ page.url %}
+                        {% elif category %}
+                          {% set canonical = SITEURL ~ '/' ~ category.url %}
+                        {% elif tag %}
+                          {% set canonical = SITEURL ~ '/' ~ tag.url %}
+                        {% endif %}
+                        <link rel="canonical" href="{{ canonical }}" />
+
+                        {# Open Graph #}
+                        <meta property="og:site_name" content="{{ SITENAME | striptags }}" />
+                        <meta property="og:type" content="{% if article %}article{% else %}website{% endif %}" />
+                        <meta property="og:title" content="{% if article %}{{ article.title|striptags }}{% elif page %}{{ page.title|striptags }}{% else %}{{ SITENAME|striptags }}{% endif %}" />
+                        <meta property="og:description" content="{% if article and article.summary %}{{ article.summary | striptags | truncate(200) }}{% elif SITESUBTITLE %}{{ SITESUBTITLE | striptags }}{% else %}{{ SITENAME | striptags }}{% endif %}" />
+                        <meta property="og:url" content="{{ canonical }}" />
+
+                        {% set og_image = none %}
+                        {% if article and article.metadata %}
+                          {% if article.metadata.get('image') %}
+                            {% set og_image = article.metadata.get('image') %}
+                          {% elif article.metadata.get('cover') %}
+                            {% set og_image = article.metadata.get('cover') %}
+                          {% elif article.metadata.get('thumbnail') %}
+                            {% set og_image = article.metadata.get('thumbnail') %}
+                          {% endif %}
+                        {% endif %}
+                        {% if OG_IMAGE and not og_image %}
+                          {% set og_image = OG_IMAGE %}
+                        {% endif %}
+                        {% if og_image %}
+                          {% if og_image[:4] == 'http' %}
+                            <meta property="og:image" content="{{ og_image }}" />
+                          {% else %}
+                            <meta property="og:image" content="{{ SITEURL }}/{{ og_image }}" />
+                          {% endif %}
+                        {% endif %}
+
+                        {# Twitter Card #}
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="{% if article %}{{ article.title|striptags }}{% elif page %}{{ page.title|striptags }}{% else %}{{ SITENAME|striptags }}{% endif %}" />
+                        <meta name="twitter:description" content="{% if article and article.summary %}{{ article.summary | striptags | truncate(200) }}{% elif SITESUBTITLE %}{{ SITESUBTITLE | striptags }}{% else %}{{ SITENAME | striptags }}{% endif %}" />
+                        {% if og_image %}
+                          {% if og_image[:4] == 'http' %}
+                            <meta name="twitter:image" content="{{ og_image }}" />
+                          {% else %}
+                            <meta name="twitter:image" content="{{ SITEURL }}/{{ og_image }}" />
+                          {% endif %}
+                        {% endif %}
                         {% if FEED_ALL_ATOM %}
                                 <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom Feed" />
                         {% endif %}
@@ -89,6 +146,15 @@
                 </footer><!-- /#contentinfo -->
 
                 {% include 'analytics.html' %}
+                {# Site-level Structured Data: WebSite #}
+                <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "WebSite",
+                  "name": "{{ SITENAME | striptags }}",
+                  "url": "{{ SITEURL }}/"
+                }
+                </script>
                 {% include 'disqus_script.html' %}
         </body>
 </html>
