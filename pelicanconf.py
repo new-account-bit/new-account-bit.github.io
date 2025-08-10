@@ -52,6 +52,25 @@ OUTPUT_PATH = 'docs'
 
 # PLUGINS = ['pelican.plugins.injector']
 
+# Enable sitemap generation
+PLUGINS = [
+    'sitemap',
+]
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'pages': 0.5,
+        'indexes': 0.5,
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'pages': 'monthly',
+        'indexes': 'daily',
+    },
+}
+
 
 # GOOGLE_ANALYTICS_JS = """
 # <!-- Google tag (gtag.js) -->

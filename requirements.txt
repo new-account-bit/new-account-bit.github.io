@@ -10,6 +10,7 @@ MarkupSafe==3.0.2
 mdurl==0.1.2
 ordered-set==4.1.0
 pelican==4.11.0
+pelican-sitemap>=1.1.0
 Pygments==2.18.0
 python-dateutil==2.9.0.post0
 rich==14.1.0

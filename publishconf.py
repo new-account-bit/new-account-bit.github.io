@@ -8,7 +8,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = ""
+SITEURL = "https://mschoi.com"
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = "feeds/all.atom.xml"
@@ -20,3 +20,23 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # DISQUS_SITENAME = ""
 # GOOGLE_ANALYTICS = ""
+
+# Ensure sitemap plugin also active on publish
+if 'PLUGINS' in globals():
+    PLUGINS = list(PLUGINS) + ['sitemap'] if 'sitemap' not in PLUGINS else PLUGINS
+else:
+    PLUGINS = ['sitemap']
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'pages': 0.5,
+        'indexes': 0.5,
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'pages': 'monthly',
+        'indexes': 'daily',
+    },
+}
