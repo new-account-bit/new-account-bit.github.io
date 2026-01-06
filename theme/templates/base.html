@@ -23,17 +23,22 @@
                         <meta name="robots" content="index,follow" />
 
                         {# Canonical URL #}
-                        {% set canonical = SITEURL ~ '/' %}
+                        {% set canonical_base = SITEURL %}
+                        {% if canonical_base.endswith('/') %}
+                          {% set canonical_base = canonical_base[:-1] %}
+                        {% endif %}
+                        {% set canonical = canonical_base ~ '/' %}
                         {% if article %}
-                          {% set canonical = SITEURL ~ '/' ~ article.url %}
+                          {% set canonical = canonical_base ~ '/' ~ article.url %}
                         {% elif page %}
-                          {% set canonical = SITEURL ~ '/' ~ page.url %}
+                          {% set canonical = canonical_base ~ '/' ~ page.url %}
                         {% elif category %}
-                          {% set canonical = SITEURL ~ '/' ~ category.url %}
+                          {% set canonical = canonical_base ~ '/' ~ category.url %}
                         {% elif tag %}
-                          {% set canonical = SITEURL ~ '/' ~ tag.url %}
+                          {% set canonical = canonical_base ~ '/' ~ tag.url %}
                         {% endif %}
                         <link rel="canonical" href="{{ canonical }}" />
+                        <link rel="alternate" href="{{ canonical }}" hreflang="ko-KR" />
 
                         {# Open Graph #}
                         <meta property="og:site_name" content="{{ SITENAME | striptags }}" />
