@@ -37,8 +37,6 @@
                         {% elif tag %}
                           {% set canonical = canonical_base ~ '/' ~ tag.url %}
                         {% endif %}
-                        <link rel="canonical" href="{{ canonical }}" />
-                        <link rel="alternate" href="{{ canonical }}" hreflang="ko-KR" />
 
                         {# Open Graph #}
                         <meta property="og:site_name" content="{{ SITENAME | striptags }}" />
