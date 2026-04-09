@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trend Feed</title>
+    <link rel="stylesheet" href="./src/fonts.css" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy-block">
+          <h1>Trend Feed</h1>
+          <p class="hero-copy">
+            A focused RSS feed dashboard for your new tab page.
+          </p>
+        </div>
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="hero-meta"
+          aria-label="Toggle controls"
+        >
+          <span class="menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <div id="hero-meta" class="hero-meta">
+          <label class="control-chip control-chip-select" for="date-filter">
+            <span class="meta-label">Published</span>
+            <span class="select-wrap">
+              <select id="date-filter">
+                <option value="none">No filter</option>
+                <option value="today">Today only</option>
+                <option value="last_2_days">Today to yesterday</option>
+                <option value="last_7_days">Today to 7 days ago</option>
+              </select>
+              <span class="select-arrow" aria-hidden="true"></span>
+            </span>
+          </label>
+          <div id="status-chip" class="control-chip control-chip-status">
+            <div class="chip-copy">
+              <span class="meta-label">Updated</span>
+              <strong id="status-banner">--:--</strong>
+            </div>
+            <button id="refresh-button" class="chip-button" type="button">Refresh</button>
+          </div>
+          <label class="control-chip control-chip-toggle" for="theme-toggle">
+            <span class="meta-label">Dark mode</span>
+            <span class="switch">
+              <input id="theme-toggle" type="checkbox" />
+              <span class="switch-track" aria-hidden="true">
+                <span class="switch-thumb"></span>
+              </span>
+            </span>
+          </label>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="panel panel-wide">
+          <div class="panel-header">
+            <p id="rss-count" class="panel-note">0 feeds saved</p>
+          </div>
+          <div id="rss-grid" class="rss-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="rss-template">
+      <section class="rss-card">
+        <div class="rss-card-header">
+          <h3></h3>
+          <a class="rss-source-link" target="_blank" rel="noreferrer" aria-label="Open feed"></a>
+        </div>
+        <div class="rss-items"></div>
+      </section>
+    </template>
+
+    <script type="module" src="./src/newtab.js"></script>
+  </body>
+</html>
