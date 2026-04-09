@@ -1,123 +1,281 @@
 <!DOCTYPE html>
 <html lang="ko">
-        <head>
-          <!-- Google tag (gtag.js) -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKBLYJ1X8S"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mschoi | Projects</title>
+    <meta
+      name="description"
+      content="mschoi가 만든 프로젝트를 간단하게 소개하는 페이지입니다."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:site_name" content="mschoi" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="mschoi | Projects" />
+    <meta
+      property="og:description"
+      content="직접 만든 프로젝트를 한 페이지에서 간단하게 소개합니다."
+    />
+    <meta property="og:url" content="https://mschoi.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="mschoi | Projects" />
+    <meta
+      name="twitter:description"
+      content="직접 만든 프로젝트를 한 페이지에서 간단하게 소개합니다."
+    />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKBLYJ1X8S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JKBLYJ1X8S");
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2193625028151658"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      :root {
+        --bg: #f6f1e8;
+        --panel: rgba(255, 252, 247, 0.84);
+        --panel-strong: #fffdf8;
+        --text: #1f1c18;
+        --muted: #645a4f;
+        --line: rgba(31, 28, 24, 0.12);
+        --accent: #b55d35;
+        --accent-strong: #8e3f1c;
+        --shadow: 0 24px 60px rgba(67, 44, 20, 0.12);
+      }
 
-            gtag('config', 'G-JKBLYJ1X8S');
-          </script>
+      * {
+        box-sizing: border-box;
+      }
 
-                        <meta charset="utf-8" />
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                        <meta name="generator" content="Pelican" />
-                        <title>mschoi</title>
-                        <link rel="stylesheet" href="https://mschoi.com/theme/css/main.css" />
-                        <meta name="robots" content="index,follow" />
+      body {
+        margin: 0;
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
+          Palatino, Georgia, serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(181, 93, 53, 0.18), transparent 30%),
+          radial-gradient(circle at top right, rgba(87, 124, 102, 0.16), transparent 28%),
+          linear-gradient(180deg, #fbf6ef 0%, var(--bg) 100%);
+      }
 
+      a {
+        color: inherit;
+      }
 
-                        <meta property="og:site_name" content="mschoi" />
-                        <meta property="og:type" content="website" />
-                        <meta property="og:title" content="mschoi" />
-                        <meta property="og:description" content="mschoi" />
-                        <meta property="og:url" content="https://mschoi.com/" />
+      .page {
+        width: min(980px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 72px;
+      }
 
+      .hero,
+      .card,
+      .footer {
+        backdrop-filter: blur(14px);
+        background: var(--panel);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
 
-                        <meta name="twitter:card" content="summary_large_image" />
-                        <meta name="twitter:title" content="mschoi" />
-                        <meta name="twitter:description" content="mschoi" />
-                                <link href="https://mschoi.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="mschoi Atom Feed" />
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2193625028151658" crossorigin="anonymous"></script>
-        </head>
+      .hero {
+        border-radius: 28px;
+        padding: 32px;
+      }
 
-        <body id="index" class="home">
-                <header id="banner" class="body">
-                        <h1><a href="https://mschoi.com/">mschoi</a></h1>
-                        <nav><ul>
-                                                <li><a href="https://mschoi.com/category/seobiseu.html">서비스</a></li>
-                        </ul></nav>
-                </header><!-- /#banner -->
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--accent-strong);
+        font-size: 0.9rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
 
-                <aside id="featured" class="body">
-                    <article>
-                        <h1 class="entry-title"><a href="https://mschoi.com/심리-테스트-플랫폼-심테창고-kr.html">심리 테스트 플랫폼: 심테창고</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2025-08-14T14:00:00+09:00">
-                Published: Thu 14 August 2025
-        </abbr>
-                <br />
-                <abbr class="modified" title="2025-08-14T14:00:00+09:00">
-                        Updated: Thu 14 August 2025
-                </abbr>
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
 
-                <address class="vcard author">
-                        By                                 <a class="url fn" href="https://mschoi.com/author/mschoi.html">mschoi</a>
-                </address>
-        <p>In <a href="https://mschoi.com/category/seobiseu.html">서비스</a>.</p>
-<p>tags: <a href="https://mschoi.com/tag/simri-teseuteu.html">심리 테스트</a> <a href="https://mschoi.com/tag/coesin-simriteseuteu.html">최신 심리테스트</a> <a href="https://mschoi.com/tag/ingi-simriteseuteu.html">인기 심리테스트</a> <a href="https://mschoi.com/tag/simtecanggo.html">심테창고</a> </p>        
-</footer><!-- /.post-info --><p>제가 직접 만들어보고 싶은 심리테스트가 있었는데, 올릴 수 있는 곳이 없어서 플랫폼을 직접 만들었습니다.</p>
-<p><a href="https://personality.mschoi.com">링크</a></p>                    </article>
-                </aside><!-- /#featured -->
-                    <section id="content" class="body">
-                        <h1>Other articles</h1>
-                        <hr />
-                        <ol id="posts-list" class="hfeed">
+      .hero h1 {
+        font-size: clamp(2.4rem, 5vw, 4.4rem);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        max-width: 10ch;
+      }
 
-                <li><article class="hentry">
-                    <header>
-                        <h1><a href="https://mschoi.com/과속-카메라-위치-확인-지도-kr.html" rel="bookmark"
-                               title="Permalink to 과속 카메라 위치 확인 지도">과속 카메라 위치 확인 지도</a></h1>
-                    </header>
+      .hero-copy {
+        margin-top: 18px;
+        max-width: 640px;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
 
-                    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2025-07-29T14:00:00+09:00">
-                Published: Tue 29 July 2025
-        </abbr>
-                <br />
-                <abbr class="modified" title="2025-07-29T14:00:00+09:00">
-                        Updated: Tue 29 July 2025
-                </abbr>
+      .section-title {
+        margin: 36px 0 16px;
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
 
-                <address class="vcard author">
-                        By                                 <a class="url fn" href="https://mschoi.com/author/mschoi.html">mschoi</a>
-                </address>
-        <p>In <a href="https://mschoi.com/category/seobiseu.html">서비스</a>.</p>
-<p>tags: <a href="https://mschoi.com/tag/gwasog-kamera-wici.html">과속 카메라 위치</a> <a href="https://mschoi.com/tag/gwasog-kamera-wici-hwagin.html">과속 카메라 위치 확인</a> </p>        
-</footer><!-- /.post-info -->                        <p>과속 카메라 위치 확인 지도를 출시했습니다.</p>
-                        <a class="readmore" href="https://mschoi.com/과속-카메라-위치-확인-지도-kr.html">read more</a>
-                    </div><!-- /.entry-content -->
-                </article></li>
-                    </ol><!-- /#posts-list -->
-                    </section><!-- /#content -->
-                <section id="extras" class="body">
-                                <div class="social">
-                                        <h2>social</h2>
-                                        <ul>
-                                                        <li><a href="https://mschoi.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+      .grid {
+        display: grid;
+        gap: 18px;
+      }
 
-                                        </ul>
-                                </div><!-- /.social -->
-                </section><!-- /#extras -->
+      .card {
+        border-radius: 24px;
+        padding: 24px;
+      }
 
-                <footer id="contentinfo" class="body">
-                        <address id="about" class="vcard body">
-                                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
-                        </address><!-- /#about -->
+      .card-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
 
-                        <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-                </footer><!-- /#contentinfo -->
+      .card h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
 
-                <script type="application/ld+json">
-                {
-                  "@context": "https://schema.org",
-                  "@type": "WebSite",
-                  "name": "mschoi",
-                  "url": "https://mschoi.com/"
-                }
-                </script>
-        </body>
+      .meta {
+        color: var(--muted);
+        font-size: 0.92rem;
+        white-space: nowrap;
+      }
+
+      .card p {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .button,
+      .ghost {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 16px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .button {
+        background: var(--accent);
+        color: #fffaf4;
+      }
+
+      .ghost {
+        border: 1px solid var(--line);
+        background: var(--panel-strong);
+      }
+
+      .footer {
+        margin-top: 28px;
+        border-radius: 20px;
+        padding: 18px 22px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .footer a {
+        color: var(--accent-strong);
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          width: min(100% - 20px, 980px);
+          padding-top: 18px;
+        }
+
+        .hero,
+        .card {
+          padding: 22px;
+        }
+
+        .card-header {
+          display: block;
+        }
+
+        .meta {
+          display: inline-block;
+          margin-top: 8px;
+          white-space: normal;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <h1>MSCHOI's projects</h1>
+      </section>
+
+      <h2 class="section-title">Projects</h2>
+
+      <section class="grid" aria-label="Project list">
+        <article class="card">
+          <div class="card-header">
+            <h2>과속 카메라 위치 확인 지도</h2>
+            <span class="meta">2025.07</span>
+          </div>
+          <p>
+            지역별 파일을 직접 뒤지지 않아도 과속 카메라 위치를 쉽게 확인할 수
+            있도록 만든 서비스입니다.
+          </p>
+          <div class="actions">
+            <a class="button" href="https://speedcameramap.mschoi.com">Visit project</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h2>Compare Area</h2>
+            <span class="meta">In progress</span>
+          </div>
+          <p>
+            두 면적을 빠르게 비교할 수 있도록 준비 중인 작은 도구입니다. 내용이
+            정리되면 이 카드만 직접 수정하면 됩니다.
+          </p>
+          <div class="actions">
+            <span class="ghost">Coming soon</span>
+          </div>
+        </article>
+      </section>
+
+      <footer class="footer">
+        GitHub Pages에서 바로 서비스 중입니다. 앞으로는
+        <strong>docs/index.html</strong> 파일만 직접 수정하면 됩니다.
+      </footer>
+    </main>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "mschoi",
+        "url": "https://mschoi.com/"
+      }
+    </script>
+  </body>
 </html>
