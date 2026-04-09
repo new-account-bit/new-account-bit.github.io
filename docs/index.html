@@ -3,25 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>mschoi | Projects</title>
+    <title>MSCHOI's Project</title>
     <meta
       name="description"
-      content="mschoi가 만든 프로젝트를 간단하게 소개하는 페이지입니다."
+      content="Explore MSCHOI's project page featuring practical web products, including a visual area comparison tool and a speed camera map built to solve specific real-world problems with simple interfaces."
     />
     <meta name="robots" content="index,follow" />
     <meta property="og:site_name" content="mschoi" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="mschoi | Projects" />
+    <meta property="og:title" content="MSCHOI's Project" />
     <meta
       property="og:description"
-      content="직접 만든 프로젝트를 한 페이지에서 간단하게 소개합니다."
+      content="Discover MSCHOI's small but purposeful web projects: lightweight tools, utility-focused services, and independent experiments designed to be immediately useful instead of overly complicated."
     />
     <meta property="og:url" content="https://mschoi.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="mschoi | Projects" />
+    <meta name="twitter:title" content="MSCHOI's Project" />
     <meta
       name="twitter:description"
-      content="직접 만든 프로젝트를 한 페이지에서 간단하게 소개합니다."
+      content="Browse a curated collection of MSCHOI's shipped projects, from map-based utilities to interactive comparison tools, presented in a fast and minimal one-page portfolio."
     />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKBLYJ1X8S"></script>
     <script>
@@ -107,7 +107,8 @@
         font-size: clamp(2.4rem, 5vw, 4.4rem);
         line-height: 0.95;
         letter-spacing: -0.04em;
-        max-width: 10ch;
+        max-width: none;
+        white-space: nowrap;
       }
 
       .hero-copy {
@@ -213,6 +214,10 @@
           padding: 22px;
         }
 
+        .hero h1 {
+          white-space: normal;
+        }
+
         .card-header {
           display: block;
         }
@@ -228,12 +233,28 @@
   <body>
     <main class="page">
       <section class="hero">
-        <h1>MSCHOI's projects</h1>
+        <h1>MSCHOI's Project</h1>
       </section>
 
       <h2 class="section-title">Projects</h2>
 
       <section class="grid" aria-label="Project list">
+        <article class="card">
+          <div class="card-header">
+            <h2>Compare Area</h2>
+            <span class="meta">2026.03</span>
+          </div>
+          <p>
+            두 면적을 빠르게 비교할 수 있도록 준비 중인 작은 도구입니다.
+          </p>
+          <div class="actions">
+            <a class="button" href="https://compare-area.mschoi.com">Visit project</a>
+          </div>
+          <!-- <div class="actions">
+            <span class="ghost">Coming soon</span>
+          </div> -->
+        </article>
+
         <article class="card">
           <div class="card-header">
             <h2>과속 카메라 위치 확인 지도</h2>
@@ -247,25 +268,10 @@
             <a class="button" href="https://speedcameramap.mschoi.com">Visit project</a>
           </div>
         </article>
-
-        <article class="card">
-          <div class="card-header">
-            <h2>Compare Area</h2>
-            <span class="meta">In progress</span>
-          </div>
-          <p>
-            두 면적을 빠르게 비교할 수 있도록 준비 중인 작은 도구입니다. 내용이
-            정리되면 이 카드만 직접 수정하면 됩니다.
-          </p>
-          <div class="actions">
-            <span class="ghost">Coming soon</span>
-          </div>
-        </article>
       </section>
 
       <footer class="footer">
-        GitHub Pages에서 바로 서비스 중입니다. 앞으로는
-        <strong>docs/index.html</strong> 파일만 직접 수정하면 됩니다.
+        © 2026 mschoi.com. All rights reserved.
       </footer>
     </main>
 
